@@ -110,7 +110,7 @@ const PricingSection: React.FC = () => {
       filter: "blur(0px)",
       transition: {
         duration: 0.8,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as const,
       },
     },
   };
@@ -130,7 +130,7 @@ const PricingSection: React.FC = () => {
       transition: {
         duration: 0.8,
         delay: index * 0.2,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as const,
       },
     }),
   };
@@ -148,7 +148,7 @@ const PricingSection: React.FC = () => {
       transition: {
         duration: 0.6,
         delay: 0.3,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.25, 0.25, 0, 1] as const,
       },
     },
   };
@@ -257,7 +257,7 @@ const PricingSection: React.FC = () => {
                           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                           transition={{
                             duration: 0.5,
-                            ease: [0.25, 0.25, 0, 1],
+                            ease: [0.25, 0.25, 0, 1] as const,
                           }}
                         >
                           ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
@@ -275,9 +275,9 @@ const PricingSection: React.FC = () => {
                   </CardHeader>
 
                   <CardContent className="space-y-8 relative z-10">
-                    <ul className="space-y-4" role="list">
+                    <div className="space-y-4">
                       {plan.features.map((feature, featureIndex) => (
-                        <motion.li
+                        <motion.div
                           key={featureIndex}
                           className="flex items-start gap-3"
                           initial={{ opacity: 0, x: -20, filter: "blur(4px)" }}
@@ -297,7 +297,7 @@ const PricingSection: React.FC = () => {
                           transition={{
                             delay: 0.8 + index * 0.2 + featureIndex * 0.1,
                             duration: 0.5,
-                            ease: [0.25, 0.25, 0, 1],
+                            ease: [0.25, 0.25, 0, 1] as const,
                           }}
                         >
                           <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -310,9 +310,9 @@ const PricingSection: React.FC = () => {
                           >
                             {feature}
                           </span>
-                        </motion.li>
+                        </motion.div>
                       ))}
-                    </ul>
+                    </div>
 
                     <motion.div
                       className="pt-4"
