@@ -34,31 +34,51 @@ const PricingSection: React.FC = () => {
 
   const plans: PricingPlan[] = [
     {
-      name: "Plus",
-      description: "For personal use",
-      monthlyPrice: 15,
-      yearlyPrice: 179,
+      name: "Starter",
+      description: "Perfect for individuals",
+      monthlyPrice: 19,
+      yearlyPrice: 199,
       features: [
-        "Up to 5 team members",
-        "Basic components library",
-        "Community support",
-        "1GB storage space",
+        "50,000 AI words per month",
+        "20+ content templates",
+        "Basic SEO optimization",
+        "Email support",
+        "Brand voice training",
       ],
-      buttonText: "Purchase",
+      buttonText: "Start Free Trial",
     },
     {
-      name: "Pro",
-      description: "For professionals",
-      monthlyPrice: 30,
-      yearlyPrice: 359,
+      name: "Professional",
+      description: "For growing businesses",
+      monthlyPrice: 49,
+      yearlyPrice: 499,
       features: [
-        "Everything in Plus, and:",
-        "Unlimited team members",
-        "Advanced components",
+        "200,000 AI words per month",
+        "50+ content templates",
+        "Advanced SEO tools",
         "Priority support",
-        "Unlimited storage",
+        "Team collaboration",
+        "Custom brand voices",
+        "Analytics dashboard",
       ],
-      buttonText: "Purchase",
+      buttonText: "Start Free Trial",
+    },
+    {
+      name: "Enterprise",
+      description: "For large organizations",
+      monthlyPrice: 99,
+      yearlyPrice: 999,
+      features: [
+        "Unlimited AI words",
+        "All content templates",
+        "Advanced integrations",
+        "Dedicated account manager",
+        "Custom AI training",
+        "White-label solution",
+        "Advanced analytics",
+        "API access",
+      ],
+      buttonText: "Contact Sales",
     },
   ];
 
@@ -134,7 +154,7 @@ const PricingSection: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="min-h-screen bg-black text-white py-20 px-4">
+    <section ref={ref} className="relative z-10 min-h-screen bg-black/50 backdrop-blur-sm border-t border-white/10 text-white py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           variants={containerVariants}
@@ -151,9 +171,9 @@ const PricingSection: React.FC = () => {
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-400 mb-12"
+              className="text-xl text-white/70 mb-12"
             >
-              Check out our affordable pricing plans
+              Choose the perfect plan for your content creation needs
             </motion.p>
 
             {/* Billing Toggle */}
@@ -164,7 +184,7 @@ const PricingSection: React.FC = () => {
               <motion.span
                 className="text-lg font-medium"
                 animate={{
-                  color: !isYearly ? "#ffffff" : "#9ca3af",
+                  color: !isYearly ? "#ffffff" : "#ffffff80",
                   scale: !isYearly ? 1.05 : 1,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -181,7 +201,7 @@ const PricingSection: React.FC = () => {
                 <Switch
                   checked={isYearly}
                   onCheckedChange={setIsYearly}
-                  className="data-[state=checked]:bg-[#ccab55] data-[state=unchecked]:bg-gray-600 transition-all duration-300 scale-125"
+                  className="data-[state=checked]:bg-yellow-400 data-[state=unchecked]:bg-white/20 transition-all duration-300 scale-125"
                   aria-label="Toggle between monthly and yearly billing"
                 />
               </motion.div>
@@ -189,7 +209,7 @@ const PricingSection: React.FC = () => {
               <motion.span
                 className="text-lg font-medium"
                 animate={{
-                  color: isYearly ? "#ffffff" : "#9ca3af",
+                  color: isYearly ? "#ffffff" : "#ffffff80",
                   scale: isYearly ? 1.05 : 1,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -200,7 +220,7 @@ const PricingSection: React.FC = () => {
           </motion.header>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -214,15 +234,15 @@ const PricingSection: React.FC = () => {
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Card className="bg-black border-gray-700 text-white h-full p-8 relative overflow-hidden">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full p-8 relative overflow-hidden hover:bg-white/10 transition-all duration-300">
                   {/* Subtle gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-800/20 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-transparent pointer-events-none" />
 
                   <CardHeader className="pb-6 relative z-10">
                     <CardTitle className="text-2xl font-bold mb-2">
                       {plan.name}
                     </CardTitle>
-                    <CardDescription className="text-gray-400 text-base">
+                    <CardDescription className="text-white/70 text-base">
                       {plan.description}
                     </CardDescription>
 
@@ -243,7 +263,7 @@ const PricingSection: React.FC = () => {
                           ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
                         </motion.span>
                         <motion.span
-                          className="text-gray-400 ml-2 text-lg"
+                          className="text-white/60 ml-2 text-lg"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.2, duration: 0.3 }}
@@ -285,7 +305,7 @@ const PricingSection: React.FC = () => {
                             className={`text-base ${
                               feature.includes("Everything in Plus")
                                 ? "font-semibold text-white"
-                                : "text-gray-300"
+                                : "text-white/80"
                             }`}
                           >
                             {feature}
@@ -308,19 +328,19 @@ const PricingSection: React.FC = () => {
                         onClick={() => handlePurchase(plan.name)}
                         className="
     w-full
-    bg-black
-    border border-yellow-400/60
-    text-yellow-300
-    font-medium
+    bg-yellow-400
+    border-2 border-yellow-400
+    text-black
+    font-semibold
     py-4 px-8
     text-lg
-    rounded-2xl
+    rounded-xl
     transition-all duration-300
     
+    hover:bg-yellow-300
     hover:border-yellow-300
-    hover:text-yellow-100
-    hover:shadow-[0_0_30px_8px_rgba(234,179,8,0.5)]
-    hover:bg-yellow-400/10
+    hover:shadow-lg
+    hover:shadow-yellow-400/25
     
     active:scale-[0.98]
   "

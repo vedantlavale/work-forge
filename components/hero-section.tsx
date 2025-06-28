@@ -87,7 +87,7 @@ export default function HeroSection() {
                       className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                     >
                       <span className="text-foreground text-sm">
-                        Introducing Support for AI Models
+                        🚀 New: Advanced AI Writing Assistant
                       </span>
                       <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
                     as="h1"
                     className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]"
                   >
-                    Modern Solutions for Customer Engagement
+                    AI-Powered Content Creation at Scale
                   </TextEffect>
                   <TextEffect
                     per="line"
@@ -120,8 +120,7 @@ export default function HeroSection() {
                     as="p"
                     className="mx-auto mt-8 max-w-2xl text-balance text-lg"
                   >
-                    Highly customizable components for building modern websites
-                    and applications that look and feel the way you mean it.
+                    Transform your content strategy with our AI writing assistant. Create blog posts, social media content, and marketing copy 10x faster with human-like quality.
                   </TextEffect>
 
                   <AnimatedGroup
@@ -148,7 +147,7 @@ export default function HeroSection() {
                         className="rounded-xl px-5 text-base"
                       >
                         <Link href="#link">
-                          <span className="text-nowrap">Start Building</span>
+                          <span className="text-nowrap">Start Free Trial</span>
                         </Link>
                       </Button>
                     </div>
@@ -160,7 +159,7 @@ export default function HeroSection() {
                       className="h-10.5 rounded-xl px-5"
                     >
                       <Link href="#link">
-                        <span className="text-nowrap">Request a demo</span>
+                        <span className="text-nowrap">Watch Demo</span>
                       </Link>
                     </Button>
                   </AnimatedGroup>

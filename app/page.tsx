@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import { HeroHeader } from "@/components/header";
 import HeroSection from "@/components/hero-section";
 import Pricing from "@/components/pricing";
+import FeaturesSection from "@/components/features";
 
 export default function Home() {
   return (
@@ -19,10 +20,21 @@ export default function Home() {
         {/* Your Content/Components */}
 
         <HeroHeader />
-        <HeroSection />
-        <Pricing/>
-        <Faq1/>
-        <Footer/>   
+        <section id="home">
+          <HeroSection />
+        </section>
+        <section id="features">
+          <FeaturesSection />
+        </section>
+        <section id="pricing">
+          <Pricing/>
+        </section>
+        <section id="faq">
+          <Faq1/>
+        </section>
+        <section id="contact">
+          <Footer/>   
+        </section>
       </div>
   );
 }

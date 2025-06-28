@@ -19,24 +19,34 @@ const Faq1 = ({
   heading = "Frequently asked questions",
   items = [
     {
-      question: "What is a FAQ?",
+      question: "How does the AI content generation work?",
       answer:
-        "A FAQ is a list of frequently asked questions and answers on a particular topic.",
+        "Our AI uses advanced natural language processing to understand your requirements and generate human-like content. Simply provide a topic, tone, and target audience, and our AI creates engaging content tailored to your needs.",
     },
     {
-      question: "What is the purpose of a FAQ?",
+      question: "Can I customize the AI's writing style?",
       answer:
-        "The purpose of a FAQ is to provide answers to common questions and help users find the information they need quickly and easily.",
+        "Yes! You can train the AI to match your brand voice by providing examples of your existing content. The AI learns your tone, style, and preferences to create consistent content across all your materials.",
     },
     {
-      question: "How do I create a FAQ?",
+      question: "What types of content can the AI create?",
       answer:
-        "To create a FAQ, you need to compile a list of common questions and answers on a particular topic and organize them in a clear and easy-to-navigate format.",
+        "Our AI can generate blog posts, social media content, email campaigns, product descriptions, ad copy, landing page content, and much more. We support over 50 different content types.",
     },
     {
-      question: "What are the benefits of a FAQ?",
+      question: "Is there a free trial available?",
       answer:
-        "The benefits of a FAQ include providing quick and easy access to information, reducing the number of support requests, and improving the overall user experience.",
+        "Yes! We offer a 14-day free trial with access to all features. No credit card required. You can generate up to 10,000 words during your trial period.",
+    },
+    {
+      question: "How accurate is the AI-generated content?",
+      answer:
+        "Our AI generates high-quality, factually accurate content 95% of the time. However, we always recommend reviewing and editing the content to ensure it meets your specific requirements and brand guidelines.",
+    },
+    {
+      question: "Can multiple team members collaborate?",
+      answer:
+        "Absolutely! Our Professional and Enterprise plans include team collaboration features, allowing multiple users to work together, share projects, and maintain consistent brand messaging across your organization.",
     },
   ],
 }: Faq1Props) => {

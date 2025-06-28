@@ -17,18 +17,17 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          {/* Tailark Brand Section */}
+          {/* WriteForge Brand Section */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">Tailark</h2>
+            <h2 className="text-2xl font-bold mb-4">WriteForge</h2>
             <p className="text-white/70 text-sm leading-relaxed">
-              Tailark is your launchpad to a modern coding journey. Learn,
-              build, and grow with us.
+              AI-powered content creation platform that helps businesses generate high-quality marketing content 10x faster. Transform your content strategy today.
             </p>
           </div>
 
-          {/* Navigation Section 1 */}
+          {/* Product Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Navigation</h3>
+            <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -36,6 +35,37 @@ const Footer = () => {
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/templates"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
+                >
+                  Templates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/integrations"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
+                >
+                  Integrations
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company Section */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/pricing"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
+                >
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -48,77 +78,46 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/security"
-                  className="text-white/70 hover:text-white transition-colors text-sm"
-                >
-                  Security
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Navigation Section 2 */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/pricing"
-                  className="text-white/70 hover:text-white transition-colors text-sm"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blogs"
-                  className="text-white/70 hover:text-white transition-colors text-sm"
-                >
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  Contact Us
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Getting Started & Social Section */}
+          {/* Resources & Support Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Getting Started</h3>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-3 mb-6">
               <li>
                 <Link
-                  href="/signup"
+                  href="/help"
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  Sign Up
+                  Help Center
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/login"
+                  href="/api-docs"
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  Login
+                  API Docs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/forgot-password"
+                  href="/blog"
                   className="text-white/70 hover:text-white transition-colors text-sm"
                 >
-                  Forgot Password
+                  Blog
                 </Link>
               </li>
             </ul>
 
-            <h3 className="text-lg font-semibold mb-4">Social</h3>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           </div>
         </div>
 
@@ -128,8 +127,7 @@ const Footer = () => {
             Subscribe to our Newsletter
           </h3>
           <p className="text-white/70 text-sm mb-6 max-w-md">
-            Subscribe to our newsletter for the latest coding tips, project
-            ideas, and platform updates.
+            Get the latest AI content tips, feature updates, and industry insights delivered to your inbox.
           </p>
 
           <form
@@ -153,7 +151,7 @@ const Footer = () => {
           </form>
 
           <p className="text-white/50 text-xs mt-4 max-w-2xl">
-            By submitting your email address, you agree to receive Tailark&apos;s
+            By submitting your email address, you agree to receive WriteForge&apos;s
             monthly newsletter. For more information, please read our{" "}
             <Link
               href="/privacy-policy"
@@ -177,7 +175,7 @@ const Footer = () => {
           {/* Copyright and Legal Links */}
           <div className="flex flex-col md:flex-row items-center gap-4">
             <span className="text-xs text-white/50">
-              Copyright © 2025 Tailark. All rights reserved.
+              Copyright © 2025 WriteForge. All rights reserved.
             </span>
             <div className="flex gap-6">
               <Link
