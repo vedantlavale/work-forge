@@ -1,36 +1,35 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Zap, Brain, Users, Globe, Sparkles, BarChart3 } from 'lucide-react'
 
 const features = [
   {
-    icon: Brain,
+    icon: '🧠',
     title: 'AI-Powered Writing',
     description: 'Advanced AI models trained on millions of high-quality content pieces to generate human-like text.'
   },
   {
-    icon: Zap,
+    icon: '⚡',
     title: 'Lightning Fast',
     description: 'Generate complete articles, social posts, and marketing copy in seconds, not hours.'
   },
   {
-    icon: Users,
+    icon: '👥',
     title: 'Team Collaboration',
     description: 'Work together seamlessly with real-time editing, comments, and shared brand guidelines.'
   },
   {
-    icon: Globe,
+    icon: '🌍',
     title: 'Multi-Language',
     description: 'Create content in 50+ languages with native-level fluency and cultural understanding.'
   },
   {
-    icon: Sparkles,
+    icon: '✨',
     title: 'Brand Voice Training',
     description: 'Train the AI to match your unique brand voice and maintain consistency across all content.'
   },
   {
-    icon: BarChart3,
+    icon: '📊',
     title: 'Performance Analytics',
     description: 'Track engagement, conversions, and ROI with built-in analytics and optimization suggestions.'
   }
@@ -69,7 +68,7 @@ export default function FeaturesSection() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
             >
               <div className="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-yellow-400" />
+                <span className="text-2xl">{feature.icon}</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-white/70 leading-relaxed">{feature.description}</p>
