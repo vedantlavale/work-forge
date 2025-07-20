@@ -235,7 +235,7 @@ const PricingSection: React.FC = () => {
                 whileTap={{ scale: 0.98 }}
                 className="w-full"
               >
-                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full p-3 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden hover:bg-white/10 transition-all duration-300 w-full">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white h-full p-3 sm:p-4 md:p-6 lg:p-8 relative overflow-hidden hover:bg-white/10 transition-all duration-300 w-full flex flex-col">
                   {/* Subtle gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 via-transparent to-transparent pointer-events-none" />
 
@@ -275,8 +275,8 @@ const PricingSection: React.FC = () => {
                     </div>
                   </CardHeader>
 
-                  <CardContent className="space-y-4 sm:space-y-6 md:space-y-8 relative z-10">
-                    <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                  <CardContent className="space-y-4 sm:space-y-6 md:space-y-8 relative z-10 flex-1 flex flex-col">
+                    <div className="space-y-2 sm:space-y-3 md:space-y-4 flex-1">
                       {plan.features.map((feature, featureIndex) => (
                         <motion.div
                           key={featureIndex}
