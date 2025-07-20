@@ -20,8 +20,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['Schibsted Grotesk', 'var(--font-geist-sans)', 'sans-serif'],
+        sans: ['Schibsted Grotesk','var(--font-geist-sans)', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'monospace'],
+        bricolage: ['var(--font-bricolage)', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
